@@ -10,8 +10,20 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int i = 1;
-            Console.WriteLine(i);
+            //string str = "1+2+3+4";
+            string str = Console.ReadLine();
+            string[] strNumbers = str.Split('+');
+            int iNumberSum = 0;
+
+
+            foreach (string number in strNumbers)
+            {
+                iNumberSum += Int32.Parse(number);
+            }
+
+            Console.Write(iNumberSum);
+            Console.ReadLine();
+
         }
     }
 }
